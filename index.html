@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word-Search</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>WORD SEARCH</h1>
+    
+       <div class="wrapper">
+        <h4>SCORE:  <span id="score">00</span></h4>
+        <div class="box">
+            <table>
+                <tr>
+                  <td id="r1c1">C</td>
+                  <td id="r1c2">R</td>
+                  <td id="r1c3">T</td>
+                  <td id="r1c4">X</td>
+                  <td id="r1c5">S</td>
+                  <td id="r1c6">A</td>
+                  <td id="r1c7">D</td>
+                  <td id="r1c8">R</td>
+                  <td id="r1c9">P</td>
+                  <td id="r1c10">S</td>
+                  <td id="r1c11">T</td>
+                </tr>
+                <tr>
+                  <td id="r2c1">O</td>
+                  <td id="r2c2">P</td>
+                  <td id="r2c3">C</td>
+                  <td id="r2c4">E</td>
+                  <td id="r2c5">N</td>
+                  <td id="r2c6">D</td>
+                  <td id="r2c7">I</td>
+                  <td id="r2c8">P</td>
+                  <td id="r2c9">A</td>
+                  <td id="r2c10">C</td>
+                  <td id="r2c11">I</td>
+                </tr>
+                <tr>
+                  <td id="r3c1">M</td>
+                  <td id="r3c2">A</td>
+                  <td id="r3c3">D</td>
+                  <td id="r3c4">E</td>
+                  <td id="r3c5">L</td>
+                  <td id="r3c6">I</td>
+                  <td id="r3c7">V</td>
+                  <td id="r3c8">E</td>
+                  <td id="r3c9">R</td>
+                  <td id="r3c10">I</td>
+                  <td id="r3c11">N</td>
+                </tr>
+                <tr>
+                  <td id="r4c1">P</td>
+                  <td id="r4c2">R</td>
+                  <td id="r4c3">F</td>
+                  <td id="r4c4">N</td>
+                  <td id="r4c5">O</td>
+                  <td id="r4c6">X</td>
+                  <td id="r4c7">T</td>
+                  <td id="r4c8">C</td>
+                  <td id="r4c9">P</td>
+                  <td id="r4c10">E</td>
+                  <td id="r4c11">C</td>
+                </tr>
+                <tr>
+                  <td id="r5c1">E</td>
+                  <td id="r5c2">X</td>
+                  <td id="r5c3">C</td>
+                  <td id="r5c4">E</td>
+                  <td id="r5c5">L</td>
+                  <td id="r5c6">L</td>
+                  <td id="r5c7">E</td>
+                  <td id="r5c8">N</td>
+                  <td id="r5c9">C</td>
+                  <td id="r5c10">E</td>
+                  <td id="r5c11">L</td>
+                </tr>
+                <tr>
+                  <td id="r6c1">T</td>
+                  <td id="r6c2">R</td>
+                  <td id="r6c3">U</td>
+                  <td id="r6c4">I</td>
+                  <td id="r6c5">S</td>
+                  <td id="r6c6">C</td>
+                  <td id="r6c7">T</td>
+                  <td id="r6c8">V</td>
+                  <td id="r6c9">I</td>
+                  <td id="r6c10">N</td>
+                  <td id="r6c11">U</td>
+                </tr>
+                <tr>
+                  <td id="r7c1">I</td>
+                  <td id="r7c2">I</td>
+                  <td id="r7c3">G</td>
+                  <td id="r7c4">T</td>
+                  <td id="r7c5">L</td>
+                  <td id="r7c6">K</td>
+                  <td id="r7c7">C</td>
+                  <td id="r7c8">I</td>
+                  <td id="r7c9">R</td>
+                  <td id="r7c10">Q</td>
+                  <td id="r7c11">S</td>
+                </tr>
+                <tr>
+                  <td id="r8c1">T</td>
+                  <td id="r8c2">T</td>
+                  <td id="r8c3">P</td>
+                  <td id="r8c4">O</td>
+                  <td id="r8c5">E</td>
+                  <td id="r8c6">Q</td>
+                  <td id="r8c7">U</td>
+                  <td id="r8c8">O</td>
+                  <td id="r8c9">T</td>
+                  <td id="r8c10">U</td>
+                  <td id="r8c11">I</td>
+                </tr>
+                <tr>
+                  <td id="r9c1">I</td>
+                  <td id="r9c2">I</td>
+                  <td id="r9c3">E</td>
+                  <td id="r9c4">R</td>
+                  <td id="r9c5">A</td>
+                  <td id="r9c6">B</td>
+                  <td id="r9c7">A</td>
+                  <td id="r9c8">I</td>
+                  <td id="r9c9">R</td>
+                  <td id="r9c10">A</td>
+                  <td id="r9c11">V</td>
+                </tr>
+                <tr>
+                  <td id="r10c1">V</td>
+                  <td id="r10c2">R</td>
+                  <td id="r10c3">N</td>
+                  <td id="r10c4">P</td>
+                  <td id="r10c5">T</td>
+                  <td id="r10c6">L</td>
+                  <td id="r10c7">D</td>
+                  <td id="r10c8">E</td>
+                  <td id="r10c9">E</td>
+                  <td id="r10c10">C</td>
+                  <td id="r10c11">E</td>
+                </tr>
+                <tr>
+                  <td id="r11c1">E</td>
+                  <td id="r11c2">A</td>
+                  <td id="r11c3">D</td>
+                  <td id="r11c4">E</td>
+                  <td id="r11c5">L</td>
+                  <td id="r11c6">E</td>
+                  <td id="r11c7">S</td>
+                  <td id="r11c8">C</td>
+                  <td id="r11c9">O</td>
+                  <td id="r11c10">R</td>
+                  <td id="r11c11">T</td>
+                </tr>
+              </table> <br>
+              <div class="button">
+                <input type="button" disabled id="btnSubmit" onclick="onSubmit()" value="submit">
+            </div> 
+        </div>
+        <div class="box">
+            <ul>
+                <li id="0">Competitive</li>
+                <li id="1">Inclusive</li>
+                <li id="2">Excellence</li>
+                <li id="3">Deliver</li>
+                <li id="4">Goals</li>
+              </ul>
+        </div>
+
+    </div> 
+    
+    
+   
+    <script src="./scrpt.js"></script>
+  </body>
+</html>
