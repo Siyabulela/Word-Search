@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagram Challenge</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+    <h1>Anagram Challenge</h1>
+    <div class="col-6">
+        <p>Unscramble the letter to find a word associated with courageously pursuing a better way - to help you we've described what type of word you're looking for : </p>
+        <table class="center">
+            <tr id="mindGear" >
+              <td> Mindgear (verb)</td>
+              <td ><input autocomplete="off" id="mind" type="text" placeholder="answer here..."></td>
+            </tr>
+            <tr id="moveMePrint">
+                <td>Move me print (noun)</td>
+                <td><input autocomplete="off" id="move" type="text"  placeholder="answer here..."></td>
+              </tr>
+              <tr id="notInVain">
+                <td>O, not in vain (adjective)</td>
+                <td><input autocomplete="off" id="not" type="text"  placeholder="answer here..."></td>
+              </tr>
+              <tr id="vetInVine">
+                <td>Vet in Vine (adjective)</td>
+                <td><input autocomplete="off" id="vet" type="text"  placeholder="answer here..."></td>
+              </tr>
+              <tr id="onePier">
+                <td>One pier (verb)</td>
+                <td><input autocomplete="off" id="one" type="text"  placeholder="answer here..."></td>
+              </tr>
+            </table>
+            <br>
+            <div class="button">
+                <input type="button" disabled id="btnSubmit" onclick="onSubmit()" value="submit">
+            </div> 
+
+</div>
+    <script src="./src/script.js"></script>
+</body>
+</html>
