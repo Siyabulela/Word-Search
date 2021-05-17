@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EYE-Dentify</title>
+    <link rel="stylesheet" href="./src/style.css" />
+</head>
+
+<body>
+    <h1>EYE-Dentify</h1>
+    <div class="col-6">
+        <p>
+            EYE-dentify the catalyst for positive and enduring change based on what
+            they saw:
+        </p>
+        <h4>SCORE:  <span id="score">0<span>/1000</h4>
+        <section>
+            <div class="card">
+                <img src="./src/images/nelson-mandela-wallpaper.jpeg" width="250" alt="" />
+                <p>I saw the evil of Apartheid</p>
+                <input autocomplete="off" id="apartheid" type="text" placeholder="answer here..." />
+            </div>
+            <div class="card">
+                <img src="./src/images/albert-einstein-wallpaper.jpeg" width="250" alt="" />
+                <p>I saw light and energy</p>
+                <input autocomplete="off" id="light" type="text" placeholder="answer here..." />
+            </div>
+            <div class="card">
+                <img src="./src/images/marie-curie-wallpapers.jpeg" width="250" alt="" />
+                <p>I saw an empty bus seat</p>
+                <input autocomplete="off" id="busSeat" type="text" placeholder="answer here..." />
+            </div>
+            <div class="card">
+                <img src="./src/images/rosa-parks-wallpapers.jpeg" width="250" alt="" />
+                <p>I saw polonium</p>
+                <input autocomplete="off" id="polonium" type="text" placeholder="answer here..." />
+            </div>
+            <div class="card">
+                <img src="./src/images/martin-luther-king-jr-wallpapers.jpeg" width="250" alt="" />
+                <p>I saw the promised land</p>
+                <input autocomplete="off" id="promiseLand" type="text" placeholder="answer here..." />
+            </div>
+    </div>
+    </section>
+
+    <br />
+    <div class="button">
+        <input type="button" id="btnSubmit" onclick="onSubmit()" value="submit" />
+    </div>
+    <script src="./src/script.js"></script>
+</body>
+
+</html>
