@@ -1,3 +1,4 @@
+const table = document.querySelectorAll('table tbody tr td')
 let valueArray = [],
   countWords = 0,
   score = 0;
@@ -10,30 +11,28 @@ const letterPosition = [
   'r7c3,r8c4,r9c5,r10c6,r11c7', // GOALS
 ];
 
-window.onclick = (e) => {
-  if (
-    e.target.innerText.length == 1 &&
-    onlyLetterOfTargetWords(e.target.id, letterPosition)
-  ) {
-    const id = e.target.id,
-      stringValue = addOrRemoveValue(id, e),
-      foundMatch = checkWordInWordSearch(stringValue, letterPosition);
-
-    if (foundMatch[0]) {
-      const elementFound = document.getElementById(foundMatch[1]);
-      elementFound.innerHTML = `<strike>${elementFound.innerText}</strike>`;
-      letterPosition[foundMatch[1]] = '';
-      valueArray = [];
-      countWords++;
-      score += 400;
-      document.getElementById('score').innerText = score;
-    }
-    if (countWords == 5) {
-      document.getElementById('score').innerText = score;
-      document.getElementById('btnSubmit').disabled = false;
+for (let i = 0; i < table.length; i++) {
+  table[i].onclick = e =>{
+    if(onlyLetterOfTargetWords(e.target.id, letterPosition)){
+      const id = e.target.id,
+        stringValue = addOrRemoveValue(id, e),
+        foundMatch = checkWordInWordSearch(stringValue, letterPosition);
+  
+      if (foundMatch[0]) {
+        const elementFound = document.getElementById(foundMatch[1]);
+        elementFound.innerHTML = `<strike>${elementFound.innerText}</strike>`;
+        letterPosition[foundMatch[1]] = '';
+        valueArray = [];
+        countWords++;
+        score += 200;
+        document.getElementById('score').innerText = `${score}/1000`;
+      }
+      if (countWords == 5) { 
+        document.getElementById('btnSubmit').disabled = false;
+      }
     }
   }
-};
+}
 
 function onSubmit() {
   alert('You’ve completed the crossword!');
@@ -79,7 +78,7 @@ function addOrRemoveValue(id, e) {
     e.target.style.color = 'red';
   }
   return valueArray;
-}
+} 
 function onlyLetterOfTargetWords(id, letterPosition) {
   let newArray = letterPosition.toString();
   if (newArray.includes(id)) {

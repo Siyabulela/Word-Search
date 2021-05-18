@@ -1,9 +1,9 @@
-let count = 0, count2 = 0, count3 = 0;
-window.onclick = (e) => {
-  if (e.target.nodeName === 'INPUT') {
-    this.addEventListener('input', (e) => checkUserInput(e.target));
-  }
-};
+const input = document.querySelectorAll(`input`);
+let score = 0;
+
+for (let i = 0; i < input.length; i++) {
+  input[i].addEventListener('input', (e) => checkUserInput(e.target));
+}
 
 function checkUserInput(e) {
   const userInput = e.value.toLowerCase();
@@ -11,34 +11,30 @@ function checkUserInput(e) {
 
   if (userInput === 'dreaming' && wordId === 'mind') {
     document.getElementById('mindGear').classList.add(`red`);
-    count = 1;
     disableAndCount(e);
   } else if (userInput === 'improvement' && wordId === 'move') {
     document.getElementById('moveMePrint').classList.add(`red`);
-    count = 2;
     disableAndCount(e);
   } else if (userInput === 'innovate' && wordId === 'not') {
     document.getElementById('notInVain').classList.add(`red`);
-    count = 3;
     disableAndCount(e);
   } else if (userInput === 'inventive' && wordId === 'vet') {
     document.getElementById('vetInVine').classList.add(`red`);
-    count = 4;
     disableAndCount(e);
   } else if (userInput === 'pioneer' && wordId === 'one') {
     document.getElementById('onePier').classList.add(`red`);
-    count = 5;
     disableAndCount(e);
   }
 }
 
 function disableAndCount(e) {
-  count2 = count + 0;
-  count3 = count2 + count
+  score = score + 200;
   e.disabled = true;
-  count3 === 10 ? (document.getElementById('btnSubmit').disabled = false) : null;
+  document.getElementById('score').innerText = `${score}`;
 }
 
 function onSubmit() {
-  alert('You’ve completed Anagram Challenge!');
+  score === 1000
+    ? alert('You’ve completed Anagram Challenge!')
+    : alert(`You scored ${score} points!`);
 }

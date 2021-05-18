@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Care & Dignity</title>
+    <link rel="stylesheet" href="./src/style.css" />
+</head>
+
+<body>
+    <h1>Care & Dignity Rebus Challenge</h1>
+    <div class="col-6">
+        <p>
+            Find the word or phrase related to treating everyone with care and dignity from the clue:
+        </p>
+        <h4>SCORE: <span id="score">0<span>/1000</h4>
+        <section>
+            <div style="background: rgb(208, 203, 203);" class="card">
+                <img src="./src/images/standing-everest.png" width="250" alt="" />
+                <p>EXAMPLE: Sentence - (7,9)</p>
+                <input autocomplete="off" id="example" class="red" type="text" disabled
+                    value="Standing on top of the mountain" />
+            </div>
+            <div class="card">
+                <img src="./src/images/i-stand.png" width="250" alt="" />
+                <p>Sentence - (1,10,8)</p>
+                <input autocomplete="off" id="iStand" type="text" placeholder="answer here..." />
+            </div>
+            <div class="card">
+                <img src="./src/images/m2.png" width="250" alt="" />
+                <p>Sentence - (7,9)</p>
+                <input autocomplete="off" id="diverjozi" type="text" placeholder="answer here..." />
+            </div>
+            <div class="card">
+                <img src="./src/images/rump.png" width="250" alt="" />
+                <p>Word - (12)</p>
+                <input autocomplete="off" id="rump" type="text" placeholder="answer here..." />
+            </div>
+            <div class="card">
+                <img src="./src/images/b-mf.png" width="250" alt="" />
+                <p>Sentence - (2,7)</p>
+                <input autocomplete="off" id="bMF" type="text" placeholder="answer here..." />
+            </div>
+            <div class="card">
+                <img src="./src/images/views.png" width="250" alt="" />
+                <p>Phrase - (7,5)</p>
+                <input autocomplete="off" id="views" type="text" placeholder="answer here..." />
+            </div>
+    </div>
+    </section>
+
+    <br />
+    <div class="button">
+        <input type="button" id="btnSubmit" onclick="onSubmit()" value="submit" />
+    </div>
+    <script src="./src/script.js"></script>
+</body>
+
+</html>

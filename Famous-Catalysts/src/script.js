@@ -1,3 +1,4 @@
+const input = document.querySelectorAll('input');
 const heros = [
   ['Nelson Mandela', 'apartheid'],
   ['Albert Einstein', 'light'],
@@ -6,11 +7,9 @@ const heros = [
   ['Martin Luther King', 'promiseLand'],
 ];
 let score = 0;
-window.onclick = (e) => {
-  if (e.target.nodeName === 'INPUT') {
-    this.addEventListener('input', (e) => checkUserInput(e.target));
-  }
-};
+for (let i = 0; i < input.length; i++) {
+  input[i].addEventListener('input', (e) => checkUserInput(e.target));
+}
 
 function checkUserInput(e) {
   const userInput = e.value;
@@ -25,19 +24,10 @@ function checkUserInput(e) {
 }
 
 function disableAndCount(e, wordId, itemIndex) {
-  heros.splice(itemIndex, 1);
+  score += 200;
   e.disabled = true;
-  let totalScore = calculateScore();
   document.getElementById(wordId).classList.add(`red`);
-  document.getElementById('score').innerText = `${totalScore}/1000`;
-}
-
-function calculateScore() {
-  if (heros.length == 4) return (score = 200);
-  if (heros.length == 3) return (score = 400);
-  if (heros.length == 2) return (score = 600);
-  if (heros.length == 1) return (score = 800);
-  if (heros.length == 0) return (score = 1000);
+  document.getElementById('score').innerText = `${score}/1000`;
 }
 
 function onSubmit() {
