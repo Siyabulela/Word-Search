@@ -20,13 +20,15 @@ table, td, tr, th{
     margin: auto;
     table-layout: fixed;
     border-collapse:collapse;
+    text-align: left;
 }
 table.center {
     margin-left: auto;
     margin-right: auto;
   }
-.red > td > input, .red > td{
-    color: red;
+.red > td{
+    background: red;
+    pointer-events:none;
 }  
 .button input{
     width: 100%;
@@ -36,14 +38,25 @@ table.center {
 }
 @media only screen and (min-width: 768px) {
     /* For desktop: */
-      .col-6 {width: 550px;margin: auto;}
+    .col-6 {width: 700px;margin: auto;}
+    .button input{
+        width: 700px;
+    }
   }
-td input {
-    width: 100%;
-    box-sizing: border-box;
+
+  @media only screen and (max-width: 768px) {
+    /* For desktop: */
+    select{
+        font-size: 15px;
+    }
+  }
+
+
+.partners, .win {
+    background: none;
     border: none;
-    background: white;
-} 
-input:focus{
-    outline: none;
+}
+
+select{
+    width: 100%;
 }
